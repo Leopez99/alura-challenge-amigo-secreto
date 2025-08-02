@@ -1,17 +1,17 @@
 let amigos = [];
 let listaDeAmigos = document.getElementById("listaAmigos");
-let textoDeAmigoSorteado = document.getElementById("resultado")
+let textoDeAmigoSorteado = document.getElementById("resultado");
 
 function agregarAmigo() {
     let amigoActual = document.getElementById("amigo").value;
-    textoDeAmigoSorteado.innerHTML = ""; // Borro el antiguo amigo sorteado si es que habia uno
+    textoDeAmigoSorteado.innerHTML = "";
     
     if (amigoActual.trim() === "") {
         alert("Por favor ingresa un nombre");
     } else {
         actualizarLista(amigoActual);
         mostrarListaAmigos();
-        document.getElementById("amigo").value = ""; // Limpiar input cada vez q se le agrega un nombre nuevo
+        document.getElementById("amigo").value = "";
     }
 }
 
@@ -28,31 +28,31 @@ function mostrarListaAmigos() {
     }
 }
 
-function sortearAmigo()
-{
+function sortearAmigo() {
     listaDeAmigos.innerHTML = "";
-    if(amigos.length == 0)
-    {
-        alert("No agrego ningun amigo a la lista de amigos");
-    } else 
-    {
+
+    if (amigos.length === 0) {
+        alert("No agregaste ningún amigo a la lista");
+    } else {
         textoDeAmigoSorteado.innerHTML = "El amigo secreto sorteado es: " + nombreAleatorio(amigos);
-        amigos = [];
+        var borrarLista = document.getElementById("checkbox-borrar").checked;
+        if (borrarLista) {
+            amigos = [];
+        }
+        mostrarListaAmigos();
     }
 }
 
-function nombreAleatorio(nombres)
-{ 
+function nombreAleatorio(nombres) { 
     return nombres[Math.floor(Math.random() * nombres.length)];
 }
 
 //Agrega elementos presionando Enter
 document.getElementById("amigo").addEventListener(
-    "keydown", function(event) 
-    {
-        if (event.key === "Enter") 
-        {
+    "keydown", function(event) {
+        if (event.key === "Enter") {
             agregarAmigo();
         }
     }
 );
+
