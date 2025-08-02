@@ -46,3 +46,13 @@ function nombreAleatorio(nombres)
     return nombres[Math.floor(Math.random() * nombres.length)];
 }
 
+//Agrega elementos presionando Enter
+document.getElementById("amigo").addEventListener(
+    "keydown", function(event) 
+    {
+        if (event.key === "Enter") 
+        {
+            agregarAmigo();
+        }
+    }
+);
