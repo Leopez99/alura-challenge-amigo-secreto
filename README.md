@@ -1,9 +1,7 @@
-# alura challenge amigo secreto
-
 #  Proyecto Amigo Secreto - Challenge Alura Latam
 
 > Proyecto desarrollado como parte del **Challenge Oracle ONE - Alura Latam**.  
-Una divertida aplicación web para **sortear al azar un amigo secreto** entre los nombres ingresados por el usuario.
+Es una aplicación web para **sortear al azar un amigo secreto** entre los nombres ingresados por el usuario.
 
 ---
 
@@ -16,3 +14,8 @@ Una divertida aplicación web para **sortear al azar un amigo secreto** entre lo
 - ✅ Opcion de borrar o no la lista automáticamente luego de sortear
 - ✅ Posibilidad de agregar nombres presionando Enter
 
+---
+
+##  Pagina del sitio
+
+- https://leopez99.github.io/alura-challenge-amigo-secreto/
